@@ -1,0 +1,41 @@
+﻿<Page x:Class="Halı_Saha_Yönetim.ReservationShow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Halı_Saha_Yönetim"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="700"
+      Title="ReservationShow"
+      Background="White">
+    <Grid>
+        <DataGrid Name="dgOdenecek" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="152" Margin="10,34,0,0" VerticalAlignment="Top" Width="504">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding REZ_ID}" Header="REZ. NO" />
+                <DataGridTextColumn Binding="{Binding SAHA_ID}" Header="SAHA ADI" />
+                <DataGridTextColumn Binding="{Binding TARIH}" Header="TARİH" />
+                <DataGridTextColumn Binding="{Binding SAAT}" Header="SAAT" />
+                <DataGridTextColumn Binding="{Binding REZ_SAHIP}" Header="REZERVASYON SAHİBİ" />
+                <DataGridTextColumn Binding="{Binding ACIKLAMA}" Header="AÇIKLAMA" />
+                <DataGridTextColumn Binding="{Binding UCRET}" Header="ÜCRET" />
+                <DataGridTextColumn Binding="{Binding REZ_DURUM}" Header="DURUM" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <DataGrid Name="dgOdeme" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="152" Margin="10,276,0,0" VerticalAlignment="Top" Width="504">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ODEME_ID}" Header="ID" />
+                <DataGridTextColumn Binding="{Binding ODEME_REZ_ID}" Header="REZ. NO" />
+                <DataGridTextColumn Binding="{Binding ODEME_SAHA_ID}" Header="SAHA NO" />
+                <DataGridTextColumn Binding="{Binding ODEME_UCRET}" Header="ÜCRET" />
+                <DataGridTextColumn Binding="{Binding DURUM}" Header="DURUM" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Lütfen Ödemesi Yapılacak Rezervasyon Numarasını Giriniz:" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top" Width="360" FontWeight="Bold"/>
+        <TextBox Name="txtRezId" HorizontalAlignment="Left" Height="23" Margin="375,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.767,0.304"/>
+        <Button Content="Ödemeyi Gerçekleştir" HorizontalAlignment="Left" Margin="531,202,0,0" VerticalAlignment="Top" Width="127" Height="50" Click="Odeme_Click" Background="Blue" Foreground="White" FontWeight="Bold"/>
+        <Label Content="REZERVASYON TABLOSU" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Width="504" FontWeight="Bold" Foreground="Blue"/>
+        <Label Content="ÖDEMELER TABLOSU" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Width="504" FontWeight="Bold" Foreground="Blue"/>
+    </Grid>
+</Page>

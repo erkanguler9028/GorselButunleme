@@ -1,0 +1,44 @@
+﻿<Page x:Class="Halı_Saha_Yönetim.PageScreens.Settings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Halı_Saha_Yönetim.PageScreens"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="700"
+      Title="Settings"
+      Background="White">
+
+    <Grid>
+        <DataGrid Name="dgsaha" HorizontalAlignment="Left" AutoGenerateColumns="False" Height="185" Margin="22,37,0,0" VerticalAlignment="Top" Width="296">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding SAHA_ID}" Header="SAHA ID" />
+                <DataGridTextColumn Binding="{Binding SAHA_ADI}" Header="SAHA ADI" />
+                <DataGridTextColumn Binding="{Binding UCRET}" Header="FİYAT" />
+                <DataGridTextColumn Binding="{Binding KAPASITE}" Header="KAPASİTE" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBox Name="txtad" HorizontalAlignment="Left" Height="23" Margin="494,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtfiyat" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="494,91,0,0"/>
+        <TextBox Name="txtkapasite" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="494,119,0,0"/>
+        <Button Content="Kaydet" HorizontalAlignment="Left" Margin="494,169,0,0" VerticalAlignment="Top" Width="120" Height="36" Click="Button_Ekle"/>
+        <Button Content="Sahayı Sil" HorizontalAlignment="Left" Height="36" Margin="198,315,0,0" VerticalAlignment="Top" Width="120"  Click="Button_Sil" />
+        <TextBox x:Name="txtSecim" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="198,276,0,0"/>
+        <Label Content="Saha Adı Giriniz:" HorizontalAlignment="Left" Margin="378,58,0,0" VerticalAlignment="Top" Width="111"/>
+        <Label Content="Kapasite Giriniz:" HorizontalAlignment="Left" Margin="379,118,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="109">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.296"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Ücret Giriniz:" HorizontalAlignment="Left" Margin="378,91,0,0" VerticalAlignment="Top" Width="111"/>
+        <Label Content="Silinecek Saha Id'sini Giriniz:" HorizontalAlignment="Left" Margin="22,273,0,0" VerticalAlignment="Top" Width="164"/>
+        <Label Content="SAHA TABLOSU" HorizontalAlignment="Left" Margin="22,10,0,0" VerticalAlignment="Top" Width="296" FontWeight="Bold" Foreground="Blue"/>
+
+    </Grid>
+</Page>
